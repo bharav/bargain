@@ -63,7 +63,7 @@ exports.filter = function (req, res, next) {
 };
 
 exports.destroy = function(req, res) {
-  User.findByIdAndRemove(req.params.id, function(err, user) {
+  ProductCompare.findByIdAndRemove(req.params.id, function(err, prdCompare) {
     if(err) return res.status(500).send(err);
     return res.status(204).send('No Content');
   });
